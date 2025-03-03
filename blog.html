@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F4F7FF] m-2 font-poppins">
+    <header class="container mx-auto max-w-screen-xl">
+         <nav class="flex justify-between items-center p-2 bg-[#FFFFFF] text-black rounded-md">
+            <div class="logo flex items-center gap-x-2">
+                <img src="./assets/logo.png" alt="logo">
+                <span class="text-[35px]">Dev<span class="font-bold">Board</span></span>
+            </div>
+            <div class="navlist flex items-center gap-x-4">
+                <button class="go-to-home bg-[#3752FD] px-4 py-1 rounded-md text-black font-semibold hover:bg-[#03179b] transform transition-all duration-500 ease-in-out" type="button">Back to Desk</button>
+            </div>
+         </nav>
+    </header>
+
+    <main class="container bg-white rounded-md mx-auto max-w-screen-xl flex  items-center flex-col gap-y-4 p-4 mt-8">
+         <h1 class="text-black font-bold text-3xl">Blog</h1>
+        <div class="w-full border-2 border-[#3752FD] p-4 rounded-md">
+            <p class="text-black font-semibold text-xl border-b-2 border-dotted border-[#767c8e] pb-1">Question-1: What are the different ways to select an element in the DOM?</p>
+            <div>
+                <p>
+                    <ul class="list-disc list-inside pl-6 pt-2">
+                        <li>In DOM,There are many ways to select and element but 5 types are mostly used.</li>
+                        <li>document.getElementById("id") → Selects an element by its ID.</li>
+                        <li>document.getElementsByClassName("class") → Selects all elements with a class.</li>
+                        <li>document.getElementsByTagName("tag") → Selects elements by tag name</li>
+                        <li>document.querySelector("selector") → Selects the first element matching a CSS selector.</li>
+                        <li>document.querySelectorAll("selector") → Selects all elements matching a CSS.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="w-full border-2 border-[#3752FD] p-4 rounded-md">
+            <p class="text-black font-semibold text-xl border-b-2 border-dotted border-[#767c8e] pb-1">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+             <p>
+                <ul class="list-disc list-inside pl-6 pt-2">
+                   <li> innerHTML → Returns the HTML inside the Selector or element.</li>
+                   <li> innerText → Returns the value or text inside the Selector or element</li>
+                   <li> textContent → Returns or sets all the text, including hidden text, but does not interpret HTML.</li>
+                    
+                </ul>
+             </p>
+        </div>
+        <div class="w-full border-2 border-[#3752FD] p-4 rounded-md">
+            <p class="text-black font-semibold text-xl border-b-2 border-dotted border-[#767c8e] pb-1">Question-3: What is event delegation in the DOM?</p>
+            <p >
+                <ul class="list-disc list-outside pl-10 pt-2">
+                    <li>
+                        Event delegation is a technique where you attach a 
+                        single event listener to a parent element instead of adding 
+                        separate listeners to each child element. This works because events
+                        bubble up to their parent.
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="w-full border-2 border-[#3752FD] p-4 rounded-md">
+            <p class="text-black font-semibold text-xl border-b-2 border-dotted border-[#767c8e] pb-1">Question-4: What is event bubbling in the DOM?</p>
+            <p >
+                <ul class="list-disc list-outside pl-10 pt-2">
+                    <li>
+                         Event bubbling is a process where an event starts from the target 
+                         element and moves up to its parent and then higher-level ancestors.
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="w-full border-2 border-[#3752FD] p-4 rounded-md">
+            <p class="text-black font-semibold text-xl border-b-2 border-dotted border-[#767c8e] pb-1">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+            <p >
+                <ul class="list-disc list-outside pl-10 pt-2">
+                    <li>
+                        To create an element-- use the document.createElement() method.
+                    </li>
+                    <li>
+                        To add an element-- use the appendChild() method or insertBefore() method.
+                    </li>
+                    <li>
+                        To remove an element-- use the removeChild() method.
+                    </li>
+                </ul>
+        </div>
+
+    </main>
+
+    <script>
+         document.querySelector('.go-to-home').addEventListener('click',()=>{
+              window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
