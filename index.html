@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7FF] m-2 font-poppins">
+    <header class="container mx-auto max-w-screen-xl">
+         <nav class="flex justify-between items-center p-2 bg-[#FFFFFF] text-black rounded-md">
+            <div class="logo flex items-center gap-x-2">
+                <img src="./assets/logo.png" alt="logo">
+                <span class="text-[35px]">Dev<span class="font-bold">Board</span></span>
+            </div>
+            <div class="navlist flex items-center gap-x-4">
+                <div class="flex items-center bg-[#F4F7FF] rounded-3xl gap-x-2 px-3">
+                    <img src="./assets/checkbox.png" alt="checkbox">
+                    <span class="text-[30px] font-bold done-task">23</span>
+               </div>
+                <div class="theme bg-[#F4F7FF] rounded-full p-2 cursor-pointer">
+                      <img src="./assets/theme-btn.png" alt="theme-btn">
+                </div>
+            </div>
+         </nav>
+    </header>
+
+  
+
+    <script>
+
+        document.querySelector('.go-to-blog').addEventListener('click',()=>{
+             window.location.href = 'Blog.html';
+        });
+
+        let options = { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' };
+        let date=new Date().toLocaleDateString('en-US', options);
+        let arr=date.split(',');
+        let create_date=document.querySelector('.date');
+            create_date.textContent=arr[1]+' '+arr[2];
+            create_date.previousElementSibling.textContent=arr[0];
+
+        function active_task(){
+            const btn = document.querySelectorAll('.btn');
+            const total_task = document.querySelectorAll('.card').length;
+            let diactive_btn_count=0;
+            let active_btn_count=0;
+            btn.forEach(lp=>{
+                if(lp.disabled){
+                    count++;
+                }
+                else{
+                    active_btn_count++;
+                }
+            });
+            if((active_btn_count+diactive_btn_count) === total_task){
+                return active_btn_count;
+            }
+            else{
+                console.log('Some task hase  not completed button');
+                return false;
+            }
+        }
+         
+       
+    </script>
+</body>
+</html>
